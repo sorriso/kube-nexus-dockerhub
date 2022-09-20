@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nexus-volume
+  namespace: devops
+spec:
+  storageClassName: local-path
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/Users/sorriso/Documents/GitHub/kube-nexus-dockerhub/volume/"
+  capacity:
+    storage: 1Gi
+  claimRef:
+    name: nexus-volume-claim
+    namespace: devops
