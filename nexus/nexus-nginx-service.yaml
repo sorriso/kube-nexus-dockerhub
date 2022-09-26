@@ -7,7 +7,11 @@ spec:
   selector:
     app: nexus-nginx
   ports:
-    - name: nexus-nginx
+    - name: nexus-nginx-http
       protocol: TCP
-      port: 9999
-      targetPort: 9999
+      port: 80
+      targetPort: 80
+    - name: nexus-nginx-https
+      protocol: TCP
+      port: 443
+      targetPort: 443

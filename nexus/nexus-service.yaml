@@ -7,11 +7,11 @@ spec:
   selector:
     app: nexus
   ports:
-    - name: nexus-ui
+    - name: nexus-http
       protocol: TCP
-      port: 6666
+      port: 8081
       targetPort: 8081
     - name: nexus-docker
       protocol: TCP
-      port: 7777
+      port: 8082
       targetPort: 8082

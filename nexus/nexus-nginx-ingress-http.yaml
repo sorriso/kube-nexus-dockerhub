@@ -19,4 +19,4 @@ spec:
               service:
                 name: nexus-nginx-service
                 port:
-                  number: 9999
+                  number: 80

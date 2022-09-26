@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nexus-nginx-deployment
   namespace: devops
   labels:
     app: nexus-nginx
@@ -20,7 +20,9 @@ spec:
         image: nginx:1.23.1-alpine
         imagePullPolicy: Never
         ports:
-          - containerPort: 9999
+          - containerPort: 80
+            protocol: TCP
+          - containerPort: 443
             protocol: TCP
         resources:
           limits:
