@@ -34,8 +34,14 @@ spec:
           volumeMounts:
             - name: nexus-storage
               mountPath: /nexus-data
-              subPath: data
+#              subPath: data
+            - name: nexus-storage-lh
+              mountPath: /lh-data
+#              subPath: data
       volumes:
         - name: nexus-storage
           persistentVolumeClaim:
             claimName: nexus-volume-claim
+        - name: nexus-storage-lh
+          persistentVolumeClaim:
+            claimName: nexus-volume-claim2

@@ -1,7 +1,7 @@
 .git
 .DS_Store
 .ipynb_checkpoints
-**/logs/**
+**/volume/**
 **/data/**
 !*.gitkeep
 *.pem
