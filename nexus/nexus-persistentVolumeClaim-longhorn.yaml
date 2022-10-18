@@ -1,12 +1,12 @@
 apiVersion: "v1"
 kind: "PersistentVolumeClaim"
 metadata:
-  name: nexus-volume-claim2
+  name: nexus-volume-claim
   namespace: devops
 spec:
-  storageClassName: longhorn
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 500Mi
+  storageClassName: longhorn

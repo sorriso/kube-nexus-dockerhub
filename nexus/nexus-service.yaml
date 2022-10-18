@@ -15,3 +15,7 @@ spec:
       protocol: TCP
       port: 8082
       targetPort: 8082
+    - name: nexus-helm
+      protocol: TCP
+      port: 8083
+      targetPort: 8083
